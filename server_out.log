@@ -1,0 +1,309 @@
+[dotenv@17.2.3] injecting env (8) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Server running in development mode on port 5000
+MongoDB Connected: ac-72eeftl-shard-00-02.qedivlw.mongodb.net
+[0mPOST /api/users/login [32m200[0m 252.908 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDQwNiwiZXhwIjoxNzcwMDYyNDA2fQ.45njV6ojUHK7XUouqTKBQtYr8dJkwQZ5akF7_jlvsAg
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470406, exp: 1770062406 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingAddress: {
+    postalCode: '000',
+    country: 'Country',
+    address: 'Addr',
+    city: 'City'
+  },
+  paymentMethod: '1link',
+  totalPrice: 199,
+  orderItems: [
+    {
+      price: 199,
+      name: 'AirPods',
+      product: '695961ab84495a46119ae647',
+      qty: 1,
+      image: '/images/airpods.jpg'
+    }
+  ],
+  shippingPrice: 0
+}
+[0mPOST /api/orders [32m201[0m 295.022 ms - 505[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDQwNiwiZXhwIjoxNzcwMDYyNDA2fQ.45njV6ojUHK7XUouqTKBQtYr8dJkwQZ5akF7_jlvsAg
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470406, exp: 1770062406 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingAddress: {
+    postalCode: '000',
+    country: 'Country',
+    address: 'Addr',
+    city: 'City'
+  },
+  paymentMethod: '1link',
+  totalPrice: 199,
+  orderItems: [
+    {
+      price: 199,
+      name: 'AirPods',
+      qty: 1,
+      product: '695961ab84495a46119ae647'
+    }
+  ],
+  shippingPrice: 0
+}
+[0mPOST /api/orders [33m400[0m 130.737 ms - 971[0m
+[0mPOST /api/users/login [32m200[0m 477.459 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDQ5MywiZXhwIjoxNzcwMDYyNDkzfQ.kntKI4wquOwjb5xyJqWFfOg2YnSt1QyIQTrUjdJ80Tc
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470493, exp: 1770062493 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingAddress: {
+    postalCode: '000',
+    country: 'Country',
+    address: 'Addr',
+    city: 'City'
+  },
+  paymentMethod: '1link',
+  totalPrice: 199,
+  orderItems: [
+    {
+      price: 199,
+      name: 'AirPods',
+      product: [Object],
+      qty: 1,
+      image: '/images/airpods.jpg'
+    }
+  ],
+  shippingPrice: 0
+}
+[0mPOST /api/orders [32m201[0m 621.267 ms - 505[0m
+[0mPOST /api/users/login [32m200[0m 251.748 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDU2MSwiZXhwIjoxNzcwMDYyNTYxfQ.hY-5FyFfDqIZdKRnD7QWjNI9cQTIU7gDdM0_WTkFrww
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470561, exp: 1770062561 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingAddress: {
+    postalCode: '000',
+    country: 'Country',
+    address: 'Addr',
+    city: 'City'
+  },
+  paymentMethod: '1link',
+  totalPrice: 199,
+  orderItems: [
+    {
+      price: 199,
+      name: 'AirPods',
+      product: [Object],
+      qty: 1,
+      image: '/images/airpods.jpg'
+    }
+  ],
+  shippingPrice: 0
+}
+[0mPOST /api/orders [32m201[0m 289.459 ms - 505[0m
+[0mPOST /api/users/login [32m200[0m 241.341 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDU5NCwiZXhwIjoxNzcwMDYyNTk0fQ.pJlmGBO9zqMsixrF6wF1KCJbTQvew8OLDOiDgk-lYQs
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470594, exp: 1770062594 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  orderItems: [
+    {
+      name: 'AirPods',
+      qty: 1,
+      image: '/images/airpods.jpg',
+      price: 199,
+      product: [Object]
+    }
+  ],
+  shippingAddress: {
+    address: 'Addr',
+    city: 'City',
+    postalCode: '000',
+    country: 'Country'
+  },
+  paymentMethod: '1link',
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingPrice: 0,
+  totalPrice: 199
+}
+[0mPOST /api/orders [32m201[0m 272.959 ms - 505[0m
+[0mPOST /api/users/login [32m200[0m 239.436 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDY0NywiZXhwIjoxNzcwMDYyNjQ3fQ.NCK0nxFTT-fnXwDRRczAiylTO-s1GCZiE1WL6nWUmsc
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470647, exp: 1770062647 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  orderItems: [
+    {
+      name: 'AirPods',
+      qty: 1,
+      image: '/images/airpods.jpg',
+      price: 199,
+      product: [Object]
+    }
+  ],
+  shippingAddress: {
+    address: 'Addr',
+    city: 'City',
+    postalCode: '000',
+    country: 'Country'
+  },
+  paymentMethod: '1link',
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingPrice: 0,
+  totalPrice: 199
+}
+[0mPOST /api/orders [32m201[0m 276.793 ms - 505[0m
+[0mPOST /api/users/login [32m200[0m 261.006 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDc4OCwiZXhwIjoxNzcwMDYyNzg4fQ.Zs_NMe_W29JWwHJwrnGXtj8P_FMUHwuYtrZ-xvd4_k4
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470788, exp: 1770062788 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingAddress: {
+    postalCode: '000',
+    country: 'Country',
+    address: 'Addr',
+    city: 'City'
+  },
+  paymentMethod: '1link',
+  totalPrice: 199,
+  orderItems: [
+    {
+      price: 199,
+      name: 'AirPods',
+      product: 'not-an-objectid',
+      qty: 1,
+      image: '/images/airpods.jpg'
+    }
+  ],
+  shippingPrice: 0
+}
+[0mPOST /api/orders [33m400[0m 138.001 ms - 1398[0m
