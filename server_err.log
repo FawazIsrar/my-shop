@@ -1,0 +1,3 @@
+Order save error: ValidationError Order validation failed: orderItems.0.image: Path `image` is required.
+Order save error: ValidationError Order validation failed: orderItems.0.product: Cast to ObjectId failed for value "not-an-objectid" (type string) at path "product" because of "BSONError"
+Order save error: ValidationError Order validation failed: orderItems.0.product: Cast to ObjectId failed for value "not-an-objectid" (type string) at path "product" because of "BSONError"

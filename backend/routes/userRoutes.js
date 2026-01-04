@@ -1,19 +1,21 @@
 import express from 'express';
-import { authUser,getUserProfile,registerUser, updateUserProfile, 
-    getUsers , deleteUser,getUserById,updateUser} from '../controllers/userController.js';
+import { authUser, getUserProfile, registerUser, updateUserProfile, 
+    getUsers, deleteUser, getUserById, updateUser } from '../controllers/userController.js';
 const router = express.Router();
-import { protect , admin } from '../middleware/authMiddleware.js';
+import { protect, admin } from '../middleware/authMiddleware.js';
 
-
-router.route('/').post(registerUser);
+router.route('/').post(registerUser).get(protect, admin, getUsers);
 router.post('/login', authUser);
-router.route('/').get(protect,admin,getUsers);
-router.route('/:id').delete(protect,admin,deleteUser);
-router.route('/:id').get(protect,admin,getUserById);
-router.route('/:id').put(protect,admin,updateUser);
-router.route('/profile').get(protect, getUserProfile).put(protect, updateUserProfile);
 
+// ✅ STATIC route hamesha DYNAMIC (:id) se upar hona chahiye
+router.route('/profile')
+    .get(protect, getUserProfile)
+    .put(protect, updateUserProfile);
 
-
+// ❌ Dynamic routes hamesha niche hone chahiye
+router.route('/:id')
+    .delete(protect, admin, deleteUser)
+    .get(protect, admin, getUserById)
+    .put(protect, admin, updateUser);
 
 export default router;

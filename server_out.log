@@ -307,3 +307,558 @@ addOrderItems req.body: {
   shippingPrice: 0
 }
 [0mPOST /api/orders [33m400[0m 138.001 ms - 1398[0m
+[0mPOST /api/users/login [32m200[0m 242.204 ms - 279[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MDg4MCwiZXhwIjoxNzcwMDYyODgwfQ.wt7U4YKZGHMxeMUAds_Ts3HZhnVSjU38Vv-79QFZ5p4
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767470880, exp: 1770062880 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.user: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+addOrderItems req.body: {
+  itemsPrice: 199,
+  taxPrice: 0,
+  shippingAddress: {
+    postalCode: '000',
+    country: 'Country',
+    address: 'Addr',
+    city: 'City'
+  },
+  paymentMethod: '1link',
+  totalPrice: 199,
+  orderItems: [
+    {
+      price: 199,
+      name: 'AirPods',
+      product: 'not-an-objectid',
+      qty: 1,
+      image: '/images/airpods.jpg'
+    }
+  ],
+  shippingPrice: 0
+}
+[0mPOST /api/orders [33m400[0m 129.169 ms - 1398[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 290.291 ms - -[0m
+[0mPOST /api/users [32m201[0m 341.840 ms - 278[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 266.132 ms - -[0m
+[0mGET /images/perfume.jpg [33m404[0m 0.517 ms - 848[0m
+[0mGET /api/products/695961ab84495a46119ae651 [36m304[0m 140.793 ms - -[0m
+[0mGET /images/watch.jpg [33m404[0m 0.300 ms - 844[0m
+[0mGET /api/products/695961ab84495a46119ae648 [36m304[0m 167.169 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 279.560 ms - -[0m
+[0mGET /api/products/695961ab84495a46119ae652 [32m200[0m 134.799 ms - 460[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 249.908 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 250.407 ms - -[0m
+[0mGET /images/perfume.jpg [33m404[0m 0.738 ms - 848[0m
+[0mGET /images/watch.jpg [33m404[0m 0.384 ms - 844[0m
+[0mGET /api/products/695961ab84495a46119ae656 [32m200[0m 120.636 ms - 431[0m
+[0mGET /api/products/695961ab84495a46119ae64c [32m200[0m 133.759 ms - 380[0m
+[0mGET /api/products/695961ab84495a46119ae64c [36m304[0m 126.337 ms - -[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MTE1OSwiZXhwIjoxNzcwMDYzMTU5fQ.nsKG0RAsVQaBsaKTtPiJBe4WlfM64YzOkcvGVEkNGGQ
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767471159, exp: 1770063159 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+addOrderItems req.user: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+addOrderItems req.body: {
+  orderItems: [
+    {
+      product: '695961ab84495a46119ae651',
+      name: 'Royal Rust Box',
+      image: '/images/Basket2.jpg',
+      price: 1699,
+      countInStock: 100,
+      qty: 1
+    },
+    {
+      product: '695961ab84495a46119ae64c',
+      name: 'PlayStation',
+      image: '/images/playstation.jpg',
+      price: 499,
+      countInStock: 5,
+      qty: 1
+    }
+  ],
+  shippingAddress: {
+    address: 'abu al fawaz d',
+    city: 'Sadiqbad ryk',
+    postalCode: '64455',
+    country: 'Pakistan'
+  },
+  paymentMethod: 'PayPal',
+  itemsPrice: '2198.00',
+  discountPrice: '219.80',
+  shippingPrice: '0.00',
+  taxPrice: '296.73',
+  totalPrice: '2274.93'
+}
+[0mPOST /api/orders [32m201[0m 267.601 ms - 691[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MTE1OSwiZXhwIjoxNzcwMDYzMTU5fQ.nsKG0RAsVQaBsaKTtPiJBe4WlfM64YzOkcvGVEkNGGQ
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767471159, exp: 1770063159 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/69597877c6cabaae44d2ace5 [32m200[0m 384.136 ms - 745[0m
+[0mGET /api/config/1link [36m304[0m 0.432 ms - -[0m
+1LINK: Payment request received for Order 69597877c6cabaae44d2ace5 - Rs. 2274.93
+[0mPOST /api/payment [32m200[0m 3.115 ms - 107[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MTE1OSwiZXhwIjoxNzcwMDYzMTU5fQ.nsKG0RAsVQaBsaKTtPiJBe4WlfM64YzOkcvGVEkNGGQ
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767471159, exp: 1770063159 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mPUT /api/orders/69597877c6cabaae44d2ace5/pay [32m200[0m 402.432 ms - 856[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MTE1OSwiZXhwIjoxNzcwMDYzMTU5fQ.nsKG0RAsVQaBsaKTtPiJBe4WlfM64YzOkcvGVEkNGGQ
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767471159, exp: 1770063159 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/69597877c6cabaae44d2ace5 [32m200[0m 414.979 ms - 910[0m
+[0mPOST /api/users/login [32m200[0m 218.425 ms - 279[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 270.570 ms - -[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MTI0OCwiZXhwIjoxNzcwMDYzMjQ4fQ.UUENOwn7qomJk8arM6ETh-pSezOT9ws4nCI6Yc62bJA
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767471248, exp: 1770063248 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+[0mGET /api/orders [32m200[0m 389.828 ms - 4090[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MTI0OCwiZXhwIjoxNzcwMDYzMjQ4fQ.UUENOwn7qomJk8arM6ETh-pSezOT9ws4nCI6Yc62bJA
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767471248, exp: 1770063248 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+[0mPUT /api/orders/69597877c6cabaae44d2ace5/deliver [32m200[0m 409.663 ms - 896[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MTI0OCwiZXhwIjoxNzcwMDYzMjQ4fQ.UUENOwn7qomJk8arM6ETh-pSezOT9ws4nCI6Yc62bJA
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767471248, exp: 1770063248 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+[0mGET /api/orders/69597877c6cabaae44d2ace5 [32m200[0m 373.659 ms - 950[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk2MWFiODQ0OTVhNDYxMTlhZTY0MyIsImlhdCI6MTc2NzQ3MTI0OCwiZXhwIjoxNzcwMDYzMjQ4fQ.UUENOwn7qomJk8arM6ETh-pSezOT9ws4nCI6Yc62bJA
+protect decoded: { id: '695961ab84495a46119ae643', iat: 1767471248, exp: 1770063248 }
+protect user found: {
+  _id: new ObjectId('695961ab84495a46119ae643'),
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  __v: 0,
+  createdAt: 2026-01-03T18:36:27.663Z,
+  updatedAt: 2026-01-03T18:36:27.663Z
+}
+[0mGET /api/orders [32m200[0m 746.778 ms - 4130[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 279.441 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 279.892 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 279.227 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 260.224 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 269.629 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 272.682 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 262.279 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 258.655 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 284.534 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 256.871 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 284.724 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 263.351 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 288.783 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 288.793 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 273.333 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 277.709 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 246.889 ms - -[0m
+[0mPOST /api/users/login [33m401[0m 157.020 ms - 237[0m
+[0mPOST /api/users/login [32m200[0m 225.283 ms - 278[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 263.617 ms - -[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+addOrderItems req.user: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+addOrderItems req.body: {
+  orderItems: [
+    {
+      product: '695961ab84495a46119ae651',
+      name: 'Royal Rust Box',
+      image: '/images/Basket2.jpg',
+      price: 1699,
+      countInStock: 100,
+      qty: 1
+    },
+    {
+      product: '695961ab84495a46119ae64c',
+      name: 'PlayStation',
+      image: '/images/playstation.jpg',
+      price: 499,
+      countInStock: 5,
+      qty: 1
+    }
+  ],
+  shippingAddress: {
+    address: 'abu al fawaz d',
+    city: 'Sadiqbad ryk',
+    postalCode: '64455',
+    country: 'Pakistan'
+  },
+  paymentMethod: 'PayPal',
+  itemsPrice: '2198.00',
+  discountPrice: '219.80',
+  shippingPrice: '0.00',
+  taxPrice: '296.73',
+  totalPrice: '2274.93'
+}
+[0mPOST /api/orders [32m201[0m 265.455 ms - 691[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/69597c23c6cabaae44d2ad42 [32m200[0m 376.671 ms - 745[0m
+1LINK: Payment request received for Order 69597c23c6cabaae44d2ad42 - Rs. 2274.93
+[0mPOST /api/payment [32m200[0m 3.140 ms - 107[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mPUT /api/orders/69597c23c6cabaae44d2ad42/pay [32m200[0m 382.402 ms - 856[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/69597c23c6cabaae44d2ad42 [32m200[0m 375.716 ms - 910[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 291.621 ms - -[0m
+[0mGET /api/products?keyword=&pageNumber= [36m304[0m 1224.394 ms - -[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 137.781 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 135.908 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 130.964 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 129.055 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 125.356 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 125.577 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 134.401 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 132.544 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 150.089 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 147.643 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 124.487 ms - 472[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 125.700 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 124.282 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 124.872 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 130.316 ms - 472[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 126.799 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 126.676 ms - 472[0m
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 147.278 ms - 1103[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/users/profile [33m401[0m 124.783 ms - 472[0m
+protect token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTk3ODM3YzZjYWJhYWU0NGQyYWNkNCIsImlhdCI6MTc2NzQ3MjE0NCwiZXhwIjoxNzcwMDY0MTQ0fQ.C8Bi9V7M5cG_k1dqq6hZRyvanRTl_yA6Elw5lN54l6E
+protect decoded: { id: '69597837c6cabaae44d2acd4', iat: 1767472144, exp: 1770064144 }
+protect user found: {
+  _id: new ObjectId('69597837c6cabaae44d2acd4'),
+  name: 'sana aslam',
+  email: 'aslam@gmail.com',
+  isAdmin: false,
+  createdAt: 2026-01-03T20:12:39.109Z,
+  updatedAt: 2026-01-03T20:12:39.109Z,
+  __v: 0
+}
+[0mGET /api/orders/myorders [33m400[0m 125.070 ms - 1103[0m

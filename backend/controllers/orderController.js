@@ -124,8 +124,16 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
     throw new Error('Order not found');
   }
 });
+// @desc    Get logged in user orders
+// @route   GET /api/orders/myorders
+// @access  Private
+const getMyOrders = asyncHandler(async (req, res) => {
+  // Yeh current logged-in user ke saare orders find karega
+  const orders = await Order.find({ user: req.user._id });
+  res.json(orders);
+});
 
 
 
 // Saare exports ek saath (Standard practice)
-export { addOrderItems, getOrderById, updateOrderToPaid, getOrders , updateOrderToDelivered};
+export { addOrderItems, getOrderById, updateOrderToPaid, getOrders , updateOrderToDelivered, getMyOrders};
